@@ -1,23 +1,22 @@
-{% extends "layouts/base.html" %}
-{% block title %}logout{% endblock %}
+{% extends 'authorization/base_login.html' %}
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 mt-3">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h3>You are logged out</h3>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <a href="{% url 'login' %}">Login</a>
-                                    OR
-                                    <a href="http://ksad.com.pl/">Main page</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <span class="login100-form-title p-b-96">
+		<h1>Thank you for cooperation!!!</h1>
+	</span>
+    <div class="flex-col-c p-b-50">
+		<div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <a href="{% url 'login' %}" class="login100-form-btn" role="button">I want to login again</a>
             </div>
         </div>
-    </div>
+	</div>
+    <div class="flex-col-c p-b-150">
+		<div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <a href="http://ksad.com.pl/" class="login100-form-btn" role="button">Return to Main page</a>
+            </div>
+        </div>
+	</div>
 {% endblock %}
